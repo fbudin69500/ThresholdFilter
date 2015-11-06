@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering</category>
+  <title>ThresholdFilter</title>
+  <description>
+   This module apply a threshold on the input image
+  </description>
+  <version>1</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Francois Budin</contributor>
+<acknowledgements>
+</acknowledgements>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/output parameters</description>
+    <image type="scalar">
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input Image</description>
+    </image>
+    <image type="scalar">
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Output Image</description>
+    </image>
+    <double>
+      <name>lowerThreshold</name>
+      <flag>-l</flag>
+      <longflag>--lowerThreshold</longflag>
+      <description>Lower Threshold value</description>
+      <label>Lower Threshold value</label>
+      <default>0</default>
+    </double>
+    <double>
+      <name>upperThreshold</name>
+      <flag>-u</flag>
+      <longflag>--upperThreshold</longflag>
+      <description>Upper Threshold value</description>
+      <label>Upper Threshold value</label>
+      <default>0</default>
+    </double>
+    <double>
+      <name>insideValue</name>
+      <flag>-v</flag>
+      <longflag>--insideValue</longflag>
+      <description>Inside Value</description>
+      <label>Inside Value</label>
+      <default>1</default>
+    </double>
+    <double>
+      <name>outsideValue</name>
+      <flag>-w</flag>
+      <longflag>--outsideValue</longflag>
+      <description>Outside Value</description>
+      <label>Outside Value</label>
+      <default>0</default>
+    </double>
+    <string-enumeration>
+      <name>thresholdType</name>
+      <flag>-t</flag>
+      <longflag>--type</longflag>
+      <description>Chooses between integer and float threshold</description>
+      <label>Threshold type</label>
+      <element>integer</element>
+      <element>float</element>
+      <default>float</default>
+    </string-enumeration>
+    <boolean>
+        <name>keepValues</name>
+        <flag>-k</flag>
+        <longflag>--keepValues</longflag>
+        <description>Keeps the values higher than the threshold</description>
+        <label>Keep Values</label>
+        <default>0</default>
+     </boolean>
+     <boolean>
+        <name>noUpperThreshold</name>
+        <flag>-p</flag>
+        <longflag>--noUpperThreshold</longflag>
+        <description>No Upper Threshold</description>
+        <label>No Upper Threshold</label>
+        <default>0</default>
+     </boolean>
+     <boolean>
+       <name>noLowerThreshold</name>
+       <flag>-q</flag>
+       <longflag>--noLowerThreshold</longflag>
+       <description>No Lower Threshold</description>
+       <label>No Lower Threshold</label>
+       <default>0</default>
+     </boolean>
+  </parameters>
+</executable>
+
